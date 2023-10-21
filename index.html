@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./src/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+    <title>Focus Time 2.0</title>
+</head>
+<body id="bodyPage">
+    <div class="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <button class="" id="menu">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <section id="modes" class="modes hidden">
+            <button class="tecla tecla_tree" id="button-tree">
+                <img id="defaultTree" class="" src="./assets/modes/Card 01.svg" alt="">
+                <img id="greenTree" class="hidden" src="./assets/modes/card1Green.svg" alt="">
+                <audio src="./assets/sounds/floresta.wav" id="som_tecla_tree" class="tocarSom hidden"></audio>
+            </button>
+
+            <button class="tecla tecla_rain" id="rain-mode">
+                <img id="defaultRain" src="./assets/modes/Card 02.svg" alt="">
+                <img id="blueRain" class="hidden" src="./assets/modes/card2Blue.svg" alt="">
+                <audio src="./assets/sounds/chuva.wav" id="som_tecla_rain" class="hidden"></audio>
+            </button>
+
+            <button class="tecla tecla_cafeteira" id="market-mode" market-mode>
+                <img id="defaultMarket" class="" src="./assets/modes/Card 03.svg" alt="">
+                <img id="yellowMarket" class="hidden" src="./assets/modes/card3Yellow.svg" alt="">
+                <audio src="./assets/sounds/cafeteira.wav" id="som_tecla_cafeteira" class="hidden"></audio>
+            </button>
+
+            <button class="tecla tecla_fire" id="fire-mode">
+                <img class="" id="defaultFire" src="./assets/modes/Card 04.svg" alt="">
+                <img class="hidden" id="redFire" src="./assets/modes/card4Red.svg" alt="">
+                <audio src="./assets/sounds/lareira.wav" id="som_tecla_fire" class="hidden"></audio>
+            </button>  
+        </section>
+
+        <section id="timer" class="flex">
+            <span id="minutes">25</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls">
+            <button data-action="toggleRunning" class="ph play ph-play-circle">
+            </button>
+
+            <button data-action="togglePause"
+            class="ph ph-pause-circle pause hidden" >                
+            </button>
+
+            <button data-action="toggleStop" class="ph ph-stop stop">
+            </button>
+
+            <button data-action="togglePlus" class="ph ph-plus-circle">
+            </button>
+
+            <button data-action="toggleMinus" class="ph ph-minus-circle">
+            </button>
+        </section>
+
+        <div class="fechaMenu isClose"></div>
+    </div>
+</body>
+</html>

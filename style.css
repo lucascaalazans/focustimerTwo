@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --hue: 194;
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.dark {
+    --bg-color: hsl(var(--hue), 5%, 7%);
+    --text-color: white;
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+    display: none;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    padding: 20px;
+    position: relative;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+
+#toggle-mode {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    
+}
+
+#menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    
+}
+
+#menu:hover{
+    animation: pulse;
+    transition:linear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    visibility: 0;
+}
+
+.hiddenEffect {
+    animation: fadeOut;
+    animation-duration: 500ms;
+    
+}
+
+.show {
+    opacity: 1;
+    animation: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+   
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;    
+    position: absolute;
+    justify-content: center;
+    gap: 10px;
+    top: 10rem;
+    right: 10px;
+
+    opacity: 0;
+
+}
+
+.modes button img {
+    width: 7.0rem;
+    position: relative;
+
+}
+
+.modes button img:hover {
+    animation: pulse;
+    transition:linear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+button:hover {
+    animation: pulse;
+    transition:linear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+button {
+    color: var(--text-color);
+}
+
+.corTeclaGreen {
+    background-color: #0080229D;
+}
+
+.corTeclaAzul {
+    background-color: #3b85edf8;
+}
+
+.corTeclaAmarela {
+
+    background-color:#e0e047f8 ;
+}
+
+.corTeclaVermelha {
+    background-color:#e73737f8;
+}
